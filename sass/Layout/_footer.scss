@@ -1,0 +1,132 @@
+footer {
+    .footer__content {
+        // background-color: $color-6;
+        h5 {
+            @include stylytext($color-4, $fs-1, $fw-1);
+            margin-bottom: $sp-7;
+        }
+        .footer__top {
+            background-color: $color-6;
+            .row {
+                padding: $sp-10 0;
+                width: 80%;
+                margin: auto;
+                .row__item {
+                    padding: 0 $sp-7 $sp-7 $sp-7;
+                }
+                .footer__logo {
+                    a {
+                        margin-bottom: $sp-5;
+                        img {
+                            height: 100px;
+                        }
+                    }
+                    p {
+                        color: $color-5;
+                        margin-bottom: $sp-7;
+                        letter-spacing: 0;
+                        line-height: $sp-7;
+                    }
+                }
+                .footer__link {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        li {
+                            list-style: none;
+                            border-bottom: 1px solid $color-3;
+                            a {
+                                text-decoration: none;
+                                color: $color-16;
+                                line-height: 45px;
+                                display: block;
+                                transition: 0.5s;
+                                &:hover {
+                                    color: $color-1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .footer__img {
+                    .row {
+                        padding: 0 11px;
+                        width: 100%;
+                        margin: 0;
+                        .img__item {
+                            // padding: 0;
+                            padding: 0 $sp-1 $sp-1 0;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer__bot {
+            border-top: 1px solid #2c2c2c;
+            background-color: #1b1b1b;
+            padding: $sp-13 0;
+            .row {
+                width: 80%;
+                margin: auto;
+                .copyright {
+                    padding: 0 $sp-7;
+                    p {
+                        margin: $sp-1 0 0 0;
+                        letter-spacing: 0;
+                        color: #6f7273;
+                        a {
+                            text-decoration: none;
+                            color: $color-4;
+                            transition: 0.5s;
+                            &:hover {
+                                color: $color-1;
+                            }
+                        }
+                    }
+                }
+                .footer__icon {
+                    text-align: right;
+                    padding: 0 $sp-7;
+                    a {
+                        display: inline-block;
+                        width: $sp-13;
+                        height: $sp-13;
+                        border: 1px solid #5a5a5a;
+                        border-radius: 50%;
+                        line-height: $sp-13;
+                        text-align: center;
+                        color: $color-11;
+                        font-size: $sp-5;
+                        margin-left: $sp-4;
+                        transition: .5s;
+                        &:hover {
+                            color: #fff;
+                            border: 1px solid transparent;
+                            background: #5a5a5a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive ("large"){
+    footer{
+        .footer__content{
+            .footer__bot{
+                .row{
+                    .footer__icon{
+                        margin-top: $sp-1;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

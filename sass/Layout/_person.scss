@@ -1,0 +1,37 @@
+.person__content{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    .person__caro{
+        .person__item{
+            margin: $sp-5;
+            img{
+                display: inline-block;
+                width: 100px;
+                border-radius: 50%;
+                margin-bottom: $sp-5;
+            }
+            .person__comment{
+                @include stylytext($color-5,$fs-2 + 1,$fw-1);
+                font-style: italic;
+                line-height: 30px;
+                margin-bottom: $sp-7;
+            }
+            h6{
+                @include stylytext($color-6,$fs-1,$fw-1);
+                margin-bottom: $sp-1;
+                letter-spacing: 2px;
+            }
+            .person__title{
+                @include stylytext($color-10,$fs-0 - 1,$fw-1);
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+.person__caro{
+    .owl-theme .owl-nav.disabled+.owl-dots{
+        margin: 0;
+    }
+}

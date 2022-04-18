@@ -1,0 +1,28 @@
+.number{    
+    background-color: $color-bg-5;
+    margin-top: $sp-1;
+    .number__content{
+        width: 70%;
+        margin: auto;
+        padding: $sp-8 0;
+        .row__item{
+            text-align: center;
+        }
+        .number__icon{
+            margin-bottom: $sp-1;
+            i{
+                font-size: $fs-8;
+                padding: $sp-1;
+                color: $color-4;
+            }
+            .counter{
+                @include stylytext($color-4,$fs-8,$fw-1);
+                letter-spacing: 2px;
+            }
+        }
+        h6{
+            color: $color-4;
+            margin: 0;
+        }
+    }
+}

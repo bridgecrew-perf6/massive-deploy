@@ -1,0 +1,149 @@
+.skill {
+    background-image: url(../img/4.jpg);
+    height: 90vh;
+    position: relative;
+    .skill__content {
+        padding: $sp-8 0;
+        width: 85%;
+        .skill__overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .row {
+            height: 500px;
+            align-items: center;
+            .col-6 {
+                padding: 0 $sp-7;
+            }
+            .skill__left {
+                // position: absolute;
+                // top: 50%;
+                h2 {
+                    text-align: center;
+                    @include stylytext($color-4, $fs-7, $fw-1);
+                    letter-spacing: 6px;
+                }
+            }
+            .skill__right {
+                color: $color-4;
+                position: absolute;
+                left: 50%;
+                top: 25%;
+                width: 50%;
+                .skill__item {
+                    padding: 0 $sp-7;
+                    h3 {
+                        @include stylytext($color-4, $fs-3, $fw-1);
+                        margin-bottom: $sp-7;
+                    }
+                    p {
+                        margin-bottom: $sp-7;
+                        letter-spacing: 0;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.skill__chart {
+    padding-top: $sp-7;
+    .chart__item {
+        background-color: $color-bg-2;
+        margin: $sp-1 0 $sp-10 0;
+        position: relative;
+        .chart__overlay {
+            background-color: $color-4;
+            position: relative;
+            .percent {
+                @include stylytext($color-6, $fs-0 - 3, $fw-1);
+                height: 25px;
+                line-height: 25px;
+                background-color: $color-bg-3;
+                padding: 0 8px;
+                border-radius: 30px;
+                position: absolute;
+                top: -125%;
+                right: -5px;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $color-bg-3;
+                    border-color: $color-bg-3;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    bottom: -2.5px;
+                    right: 13px;
+                }
+            }
+            .chart__white {
+                span {
+                    @include stylytext($color-6, $fs-0 - 3, $fw-1);
+                    padding-left: $sp-1;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+.chart__item {
+    .chart__overlay {
+        animation: arrive 0.5s ease-out forwards;
+    }
+}
+
+@keyframes arrive {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@include responsive("large") {
+    .skill {
+        height: 150vh;
+        .skill__content {
+            .row {
+                align-items: unset;
+                .skill__right{
+                    width: 100%;
+                    left: 0;
+                    padding: $sp-14;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium"){
+    .skill {
+        .skill__content {
+            .skill__overlay{
+                display: none;
+            }
+            .row {
+                .skill__left{
+                    h2{
+                        font-size: $fs-3;
+
+                    }
+                }
+            //     .skill__right{
+            //         width: 100%;
+            //         left: 0;
+            //         padding: $sp-8;
+            //     }
+            }
+        }
+    }
+}

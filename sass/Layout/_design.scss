@@ -1,0 +1,58 @@
+.design{
+    .design__content{
+        .design__info{
+            width: 100%;
+            margin: auto;
+            .info__item{
+                padding: 0 $sp-7;
+                .design__item{
+                    padding: $sp-7;
+                    border: 1px solid $color-13;
+                    border-radius: 4px;
+                    margin-top: $sp-10;
+                    position: relative;                    
+                    i{
+                        @include icon(60px,60px,60px,$color-6,4px,$fs-5,$color-4);
+                        box-shadow: 0 0 0 10px $color-4;
+                        position: absolute;
+                        top: -15%;
+                        transition: .5s;
+                    }
+                    .design__text{
+                        margin-top: $sp-7;
+
+                        h3{
+                            margin-bottom: $sp-5;
+                            @include stylytext($color-3,$fs-3,$fw-1);
+                        }
+                        p{
+                            color: $color-5;
+                            letter-spacing: 0;
+                            margin: 0;
+                        }
+                    }
+                    &:hover{
+                        i{
+                            background-color: $color-1;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@include responsive ("large"){
+    .design{
+        .design__content{
+            .design__info{
+                .info__item{
+                    .design__item{
+                        margin: $sp-7;
+                    }
+                }
+            }
+        }
+    }
+}

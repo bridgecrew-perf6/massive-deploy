@@ -1,0 +1,33 @@
+.modalHead{    
+    .modalHead__content{
+        background-color: $color-4;
+        box-shadow: 0 1px 2px $color-sha-0;
+        display: none;
+    }
+    &:hover{
+        .modalHead__content{
+            display: inline-block;
+        }
+    }
+}
+
+.modalPo{
+    position: relative;
+    .modalPo__content{
+        position: absolute;
+    }
+}
+
+.mainModal{
+    width: 190px;
+    .modalLink{
+        position: relative;
+        padding: $sp-1 $sp-6 $sp-1 $sp-5 + 2;
+        .linkItem{
+            position: absolute;
+            top: 6px;
+            right: 13px;
+            font-size: $fs-2;
+        }
+    }
+}

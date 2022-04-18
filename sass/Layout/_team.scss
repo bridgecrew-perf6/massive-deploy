@@ -1,0 +1,151 @@
+.team {
+    .team__content {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        .row__item{
+            padding: 0 $sp-7;
+            .team__item {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .item__info {
+                    position: absolute;
+                    right: 0;
+                    bottom: 7%;
+                    width: 70%;
+                    text-align: right;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    padding: $sp-1 $sp-5;
+                    color: $color-4;
+                    letter-spacing: 2px;
+                    h4 {
+                        white-space: nowrap;
+                        font-size: $fs-1;
+                        margin: 0;
+                        line-height: 1.5;
+                    }
+                    p {
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: $fs-0 - 1;
+                        margin: 0;
+                    }
+                }
+                .team__overlay {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    border: $sp-5 solid rgba(0, 0, 0, 0.1);
+                    background-color: rgba(255, 255, 255, 0.9);
+                    opacity: 0;
+                    transition: .5s;
+                    .overlay__txt {
+                        width: 100%;
+                        position: absolute;
+                        top: -50%;
+                        padding: 0 $sp-5;
+                        opacity: 0;
+                        h3 {
+                            @include stylytext($color-6, $fs-1, $fw-1);
+                            margin-bottom: $sp-6;
+                            letter-spacing: 4px;
+                        }
+                        p {
+                            @include stylytext($color-5, $fs-1, $fw-1);
+                        }
+                    }
+                    .team__social {
+                        width: 100%;
+                        position: absolute;
+                        bottom: -50%;
+                        opacity: 0;
+                        a {
+                            @include stylytext($color-6, $fs-2 + 1, $fw-1);
+                            margin: 0 $sp-1;
+                            i{
+                                transition: .5s;
+                            }                            
+                            &:hover{
+                                i{
+                                    color: $color-1;
+                                }
+                            }
+                        }                        
+                    }
+                }
+                &:hover{
+                    .team__overlay{
+                        opacity: 1;
+                        .overlay__txt{
+                            top: 13%;
+                            opacity: 1;
+                            transition: .3s;
+                        }
+                        .team__social{
+                            bottom: 5%;
+                            opacity: 1;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team{
+    .team__club{
+        width: 75%;
+        margin: $sp-8 auto;
+        padding: $sp-11;
+        background-color: $color-bg-4;
+        .club__text{
+            h3{
+                font-size: $fs-3;
+                span{
+                    color: $color-1;
+                }
+            }
+            p{
+                color: $color-5;
+                margin-top: $sp-1;
+                letter-spacing: 0;
+            }
+        }
+        .club__button{
+            cursor: pointer;
+            position: relative;
+            a{
+                padding: $sp-4 $sp-7;
+                background-color: $color-6;
+                color: $color-4;
+                text-decoration: none;
+                position: absolute;
+                transition: 0.5s;
+                &:hover{
+                    background-color: $color-1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1199.98px) {
+    .team{
+        .team__content{
+            .row__item{
+                .team__item{
+                    .item__info{
+                        h4{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

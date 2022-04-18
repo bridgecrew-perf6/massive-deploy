@@ -1,0 +1,46 @@
+.heading {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: $sp-9;
+
+    h2 {
+        @include stylytext($color-3, $fs-7, $fw-1);
+        padding-bottom: $sp-1;
+        margin-bottom: $sp-5;
+        position: relative;
+        text-align: center;
+        &::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: $color-12;
+            position: absolute;
+            bottom: -2px;
+            left: 48%;
+        }
+    }
+    p {
+        color: $color-5;
+        letter-spacing: 0;
+        width: 60%;
+        margin: 0 auto;
+        line-height: 25px;
+    }
+}
+
+.section {
+    padding: $sp-8 0;
+}
+
+@include responsive("medium") {
+    .heading {
+        h2 {
+            font-size: $fs-3;
+        }
+        p{
+            width: 100%;
+        }
+    }
+}

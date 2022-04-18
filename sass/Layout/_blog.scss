@@ -1,0 +1,77 @@
+.blog__content {
+    width: 75%;
+    margin: auto;
+    .row__item {
+        padding: 0 $sp-7;
+        .blog__img {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            p {
+                margin: 0;
+                padding: $sp-1;
+                width: 100%;
+                color: $color-4;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+    .blog__info {
+        padding: $sp-7;
+        a {
+            text-decoration: none;
+        }
+        .blog__text {
+            .blog__interface {
+                a {
+                    margin-right: $sp-1;
+                    @include stylytext($color-8, $fs-0 - 1, $fw-1);
+                    transition: .5s;
+                    &:hover{
+                        color: $color-1;
+                    }
+                }
+            }
+            h3 {
+                margin-bottom: $sp-1;
+                a{
+                    @include stylytext($color-6, $fs-3, $fw-1);
+                    transition: .5s;
+                    &:hover{
+                        color: $color-1;
+                    }
+                } 
+            }
+            .blog__author{
+                margin-bottom: $sp-6;
+                a,span {
+                    margin-right: $sp-1;
+                    @include stylytext($color-8, $fs-0 - 1, $fw-1);
+                    
+                }
+                a{
+                    transition: .5s;
+                    &:hover{
+                        color: $color-1;
+                    }
+                }
+            }
+            p{
+                color: $color-5;
+                line-height: 30px;
+                letter-spacing: 0;
+                margin-bottom: $sp-7;
+            }
+        }
+        .readMore{
+            color: $color-9;
+            transition: .5s;
+                    &:hover{
+                        color: $color-6;
+                    }
+        }
+    }
+}
